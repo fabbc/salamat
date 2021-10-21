@@ -158,3 +158,160 @@
 .butten {
     padding: 0.4rem 1.8rem;
 }
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 300px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 300px;
+}
+
+
+/* Taller footer on small screens */
+
+@media (max-width: 567em) {
+    body {
+        margin-bottom: 700px;
+    }
+    .footer {
+        height: 250px;
+    }
+}
+
+
+/* Sticky footer style and color
+  -------------------------------------------------- */
+
+footer {
+    padding-top: 30px;
+    background-color: #292c2f;
+    color: #bbb;
+}
+
+footer a {
+    color: #999;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #aaa;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+
+/* Credits: https://www.codeply.com/p/EJd6H4Ejyi */
+
+
+/* search box */
+
+$search-time: 800ms;
+$reset-time: 150ms;
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.search-box {
+    border: solid 5px black;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+    input[type="text"] {
+        font-family: Raleway, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        width: 50px;
+        height: 50px;
+        padding: 5px 40px 5px 10px;
+        border: none;
+        box-sizing: border-box;
+        border-radius: 50px;
+        transition: width $search-time cubic-bezier(0.68, -0.55, 0.27, 1.55) $reset-time;
+        &:focus {
+            outline: none;
+        }
+        &:focus,
+        &:not(:placeholder-shown) {
+            width: 300px;
+            transition: width $search-time cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            +button[type="reset"] {
+                bottom: 13px;
+                right: 10px;
+                transition: bottom $reset-time ease-out $search-time, right $reset-time ease-out $search-time;
+            }
+            +button[type="reset"]:after {
+                top: 0;
+                right: 10px;
+                opacity: 1;
+                transition: top $reset-time ease-out ($search-time + $reset-time), right $reset-time ease-out ($search-time + $reset-time), opacity $reset-time ease ($search-time + $reset-time);
+            }
+        }
+    }
+    button[type="reset"] {
+        background-color: transparent;
+        width: 25px;
+        height: 25px;
+        border: 0;
+        padding: 0;
+        outline: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -13px;
+        right: -15px;
+        transition: bottom $reset-time ease-out $reset-time, right $reset-time ease-out $reset-time;
+        &:before,
+        &:after {
+            content: "";
+            height: 25px;
+            border-left: solid 5px black;
+            position: absolute;
+            transform: rotate(-45deg);
+        }
+        &:after {
+            transform: rotate(45deg);
+            opacity: 0;
+            top: -20px;
+            right: -10px;
+            transition: top $reset-time ease-out, right $reset-time ease-out, opacity $reset-time ease-out;
+        }
+    }
+}
+
+
+/* end search box */

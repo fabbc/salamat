@@ -96,6 +96,23 @@
     transition: border-bottom-color .3s
 }
 
+.search-field::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(199, 199, 247);
+    opacity: 1;
+    /* Firefox */
+}
+
+.search-field:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(199, 199, 247);
+}
+
+.search-field::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(199, 199, 247);
+}
+
 .header-blue .navbar .form-inline .search-field:focus {
     border-bottom: 1px solid #ccc
 }
