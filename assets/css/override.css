@@ -227,7 +227,7 @@ footer .form-control {
 /* search box */
 
 .search-box {
-    border: solid 2px rgb(58, 57, 63);
+    border: solid 2px #3a393f;
     display: inline-block;
     position: relative;
     border-radius: 50px;
@@ -244,7 +244,7 @@ footer .form-control {
     border: none;
     box-sizing: border-box;
     border-radius: 20px;
-    background-image: linear-gradient(to bottom right, rgb(158, 181, 197), rgb(114, 143, 161));
+    background-image: linear-gradient(to bottom right, #9eb5c5, #728fa1);
     transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
 }
 
@@ -294,7 +294,7 @@ footer .form-control {
 .search-box button[type="reset"]:after {
     content: "";
     height: 11px;
-    border-left: solid 2px rgb(58, 57, 63);
+    border-left: solid 2px #3a393f;
     position: absolute;
     transform: rotate(-45deg);
 }
