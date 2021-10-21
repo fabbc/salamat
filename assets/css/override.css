@@ -227,39 +227,42 @@ footer .form-control {
 /* search box */
 
 .search-box {
-    border: solid 5px black;
+    border: solid 2px rgb(58, 57, 63);
     display: inline-block;
     position: relative;
     border-radius: 50px;
+    margin-left: 10px;
 }
 
 .search-box input[type="text"] {
     font-family: Raleway, sans-serif;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
-    width: 50px;
-    height: 50px;
-    padding: 5px 40px 5px 10px;
+    width: 15px;
+    height: 25px;
+    padding: 5px 20px 3px 5px;
     border: none;
     box-sizing: border-box;
-    border-radius: 50px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, rgb(158, 181, 197), rgb(114, 143, 161));
     transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
 }
 
 .search-box input[type="text"]:focus {
+    padding-right: 30px;
     outline: none;
 }
 
 .search-box input[type="text"]:focus,
 .search-box input[type="text"]:not(:placeholder-shown) {
-    width: 300px;
+    width: 200px;
     transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .search-box input[type="text"]:focus+button[type="reset"],
 .search-box input[type="text"]:not(:placeholder-shown)+button[type="reset"] {
-    bottom: 13px;
-    right: 10px;
+    bottom: 5px;
+    right: 5px;
     transition: bottom 150ms ease-out 800ms, right 150ms ease-out 800ms;
 }
 
@@ -273,8 +276,8 @@ footer .form-control {
 
 .search-box button[type="reset"] {
     background-color: transparent;
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 11px;
     border: 0;
     padding: 0;
     outline: 0;
@@ -282,16 +285,16 @@ footer .form-control {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -13px;
-    right: -15px;
+    bottom: -7px;
+    right: -9px;
     transition: bottom 150ms ease-out 150ms, right 150ms ease-out 150ms;
 }
 
 .search-box button[type="reset"]:before,
 .search-box button[type="reset"]:after {
     content: "";
-    height: 25px;
-    border-left: solid 5px black;
+    height: 11px;
+    border-left: solid 2px rgb(58, 57, 63);
     position: absolute;
     transform: rotate(-45deg);
 }
@@ -299,8 +302,8 @@ footer .form-control {
 .search-box button[type="reset"]:after {
     transform: rotate(45deg);
     opacity: 0;
-    top: -20px;
-    right: -10px;
+    top: -11px;
+    right: -9px;
     transition: top 150ms ease-out, right 150ms ease-out, opacity 150ms ease-out;
 }
 
