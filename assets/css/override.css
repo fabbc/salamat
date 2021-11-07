@@ -309,3 +309,41 @@ footer .form-control {
 
 
 /* end search box */
+
+
+/* start parallax image */
+
+@supports (-webkit-text-stroke: 1px black) {
+    section[id^="section"] h2 {
+        -webkit-text-stroke: 1.5px #2e2e2e;
+        -webkit-text-fill-color: rgb(245, 245, 245);
+    }
+}
+
+section[id^="section"] h2 {
+    text-align: center !important;
+    height: 25rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    line-height: 25rem;
+    color: #ddd
+}
+
+#section3 {
+    background: url("../img/Slide1CoverArt.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* end parallax image */
+
+
+/* edit footer text in little media */
+
+.text-edit_right {
+    margin-top: 2.5rem;
+}
+
+
+/* end edit */
